@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRISM — Interactive 3D Prototype</title>
+  <script type="module"
+    src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; }
+    body {
+      background: #0b0f14;
+      color: white;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      text-align: center;
+      padding: 18px 12px 10px;
+      background: #0b0f14;
+    }
+    h1 { margin: 0 0 6px; font-size: 28px; }
+    p { margin: 0; color: #b7c1cc; font-size: 17px; }
+    model-viewer {
+      width: 100%;
+      flex: 1;
+      min-height: 0;
+      background: #111820;
+      --poster-color: #111820;
+    }
+    .hint {
+      text-align: center;
+      padding: 10px;
+      color: #9ca8b5;
+      font-size: 13px;
+      background: #0b0f14;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>PRISM — Interactive 3D Prototype</h1>
+    <p>Multi-Hazard Early-Warning Sensor Network</p>
+  </header>
+
+  <model-viewer
+    src="PRISM.glb"
+    alt="PRISM multi-hazard early-warning sensor node"
+    camera-controls
+    orientation="-90deg 0deg 0deg"
+    camera-orbit="0deg 75deg 13m"
+    camera-target="0m 0.95m 0m"
+    min-camera-orbit="auto auto 6m"
+    max-camera-orbit="auto auto 20m"
+    field-of-view="30deg"
+    shadow-intensity="1"
+    exposure="1"
+    interaction-prompt="auto">
+  </model-viewer>
+
+  <div class="hint">Drag to rotate • Scroll/pinch to zoom • Two-finger drag to pan</div>
+</body>
+</html>
